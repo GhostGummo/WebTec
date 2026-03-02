@@ -1,0 +1,344 @@
+/* ============================================================
+   carreras.css  —  Estilos compartidos para todas las carreras
+   TecNM Campus Cosamaloapan
+   ============================================================ */
+
+/* ===== HERO BANNER ===== */
+.carrera-hero {
+    position: relative;
+    height: 380px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+}
+.carrera-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(27,57,106,0.92) 0%, rgba(27,57,106,0.4) 60%, transparent 100%);
+}
+.carrera-hero .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 2.5rem 0;
+}
+.carrera-hero .badge-clave {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 30px;
+    padding: 0.35rem 1rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    backdrop-filter: blur(4px);
+}
+.carrera-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    margin-bottom: 0;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb-bar {
+    background: #f0f4fb;
+    border-bottom: 1px solid #dde4f0;
+    padding: 0.65rem 0;
+}
+.breadcrumb-bar .breadcrumb {
+    margin: 0;
+    font-size: 0.88rem;
+}
+.breadcrumb-bar .breadcrumb-item a {
+    color: #1B396A;
+    text-decoration: none;
+}
+.breadcrumb-bar .breadcrumb-item.active {
+    color: #555;
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.contenido-principal {
+    padding: 3rem 0 4rem;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(27,57,106,0.09);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e8edf7;
+}
+.sidebar-card .sidebar-header {
+    background: linear-gradient(135deg, #1B396A, #2563eb);
+    color: #fff;
+    padding: 1rem 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.sidebar-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+.sidebar-card ul li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    color: #1B396A;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.25s;
+    border-left: 3px solid transparent;
+}
+.sidebar-card ul li a:hover,
+.sidebar-card ul li a.active {
+    background: #f0f4fb;
+    border-left-color: #2563eb;
+    padding-left: 1.6rem;
+    font-weight: 500;
+}
+.sidebar-dato {
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+.sidebar-dato:last-child { border-bottom: none; }
+.sidebar-dato i { color: #2563eb; font-size: 1.1rem; flex-shrink: 0; }
+.sidebar-dato .dato-label { font-size: 0.78rem; color: #888; }
+.sidebar-dato .dato-valor { font-weight: 600; color: #1B396A; font-size: 0.93rem; }
+
+/* ===== SECCIONES DE CONTENIDO ===== */
+.content-section {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(27,57,106,0.07);
+    border: 1px solid #e8edf7;
+    padding: 2rem 2.25rem;
+    margin-bottom: 1.75rem;
+}
+.content-section h2.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1B396A;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 3px solid #e8edf7;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.content-section h2.section-title i {
+    color: #2563eb;
+    font-size: 1.3rem;
+}
+.content-section p {
+    color: #444;
+    line-height: 1.8;
+    font-size: 0.97rem;
+}
+
+/* ===== OBJETIVO ===== */
+.objetivo-text {
+    background: linear-gradient(135deg, #f0f4fb, #e8edf7);
+    border-left: 5px solid #1B396A;
+    border-radius: 0 0.75rem 0.75rem 0;
+    padding: 1.25rem 1.5rem;
+    font-size: 0.97rem;
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ===== PERFIL DE EGRESO ===== */
+.perfil-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: flex-start;
+}
+.perfil-item:last-child { border-bottom: none; }
+.perfil-item .num-badge {
+    min-width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #1B396A, #2563eb);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.perfil-item p {
+    margin: 0;
+    font-size: 0.93rem;
+    color: #444;
+    line-height: 1.65;
+}
+
+/* ===== TABLA ESPECIALIDAD ===== */
+.tabla-especialidad {
+    width: 100%;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    border: none;
+    margin-bottom: 0;
+}
+.tabla-especialidad thead th {
+    background: #1B396A;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    padding: 0.9rem 1rem;
+    border: none;
+    text-transform: uppercase;
+}
+.tabla-especialidad tbody tr { transition: background 0.2s; }
+.tabla-especialidad tbody tr:nth-child(even) { background: #f7f9fd; }
+.tabla-especialidad tbody tr:hover { background: #eaf0ff; }
+.tabla-especialidad tbody td {
+    padding: 0.85rem 1rem;
+    font-size: 0.91rem;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+.creditos-badge {
+    background: #e8f0fe;
+    color: #1B396A;
+    padding: 0.2rem 0.65rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.82rem;
+    white-space: nowrap;
+}
+.clave-badge {
+    background: #f0faf4;
+    color: #1a6b3a;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.83rem;
+    white-space: nowrap;
+}
+
+/* ===== CAMPO LABORAL CARDS ===== */
+.campo-card {
+    background: #f7f9fd;
+    border: 1px solid #dde4f0;
+    border-radius: 0.75rem;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    transition: all 0.25s;
+    height: 100%;
+}
+.campo-card:hover {
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(27,57,106,0.1);
+    transform: translateY(-3px);
+}
+.campo-card i {
+    font-size: 1.6rem;
+    color: #2563eb;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.campo-card p { margin: 0; font-size: 0.92rem; color: #333; line-height: 1.6; }
+
+/* ===== CAMPO LABORAL LISTA ===== */
+.campo-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.campo-lista li {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.93rem;
+    color: #333;
+    line-height: 1.6;
+}
+.campo-lista li:last-child { border-bottom: none; }
+.campo-lista li::before {
+    content: '\F26D';
+    font-family: 'bootstrap-icons';
+    color: #2563eb;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+/* ===== BOTÓN RETÍCULA ===== */
+.btn-reticula {
+    background: linear-gradient(135deg, #1B396A, #2563eb);
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0.9rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(37,99,235,0.25);
+}
+.btn-reticula:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37,99,235,0.35);
+    color: white;
+}
+.btn-reticula i { font-size: 1.2rem; }
+
+/* ===== GALERÍA ===== */
+.galeria-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    transition: transform 0.4s, box-shadow 0.4s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: block;
+}
+.galeria-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .carrera-hero { height: 240px; }
+    .carrera-hero h1 { font-size: 1.7rem; }
+    .content-section { padding: 1.25rem 1rem; }
+    .tabla-especialidad thead th,
+    .tabla-especialidad tbody td { padding: 0.65rem 0.6rem; font-size: 0.82rem; }
+}
