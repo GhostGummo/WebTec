@@ -22,7 +22,7 @@ function loadHTML(elementId, filePath) {
 // Cargar menú y footer cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
     // Cargar menú y después inicializar funcionalidades
-    loadHTML('menu-container', '../html/menu.html').then(loaded => {
+    loadHTML('menu-container', 'html/menu.html').then(loaded => {
         if (loaded) {
             // Inicializar funcionalidades del menú después de cargarlo
             initializeAccessibilityTools();
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Cargar footer
-    loadHTML('footer-container', '../html/footer.html').then(loaded => {
+    loadHTML('footer-container', 'html/footer.html').then(loaded => {
         if (loaded) {
             // Inicializar botón "volver arriba"
             initializeBackToTop();
