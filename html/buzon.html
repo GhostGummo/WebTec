@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzon de quejas y sugerencias -TecNM Campus Cosamaloapan</title>
+    <meta name="description" content="Buzon de quejas y sugerencias del TecNM Campus Cosamaloapan">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilosPagina.css">
+    <link rel="stylesheet" href="../css/buzondequejas.css">
+</head>
+<body>
+   <div class="btn-back-wrap">
+  <a href="http://127.0.0.1:5500/WebTec/html/index.html" class="btn-back">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5M12 5l-7 7 7 7"/>
+    </svg>
+    Regresar al menú
+  </a>
+</div>
+
+<div class="wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="deco-circle"></div>
+
+    <div class="avatar-ring">
+      <svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+    </div>
+
+    <p class="institute">Instituto Tecnológico Superior</p>
+    <h2 class="sidebar-title">Información<em>de Contacto</em></h2>
+
+    <div class="sidebar-divider"></div>
+
+    <ul class="contact-list">
+      <li>
+        <span class="icon">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </span>
+        <span>info.contact@gmail.com</span>
+      </li>
+      <li>
+        <span class="icon">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        </span>
+        <span>01 288 88 2 31 00<br>ext. 01</span>
+      </li>
+    </ul>
+
+    <div class="sidebar-badge">Cosamaloapan · Veracruz</div>
+  </aside>
+
+  <!-- FORM PANEL -->
+  <main class="form-panel">
+    <div class="top-bar"></div>
+
+    <p class="form-eyebrow">Centro de Atención Estudiantil</p>
+    <h1 class="form-title">Envíanos tu <em>comentario</em></h1>
+
+    <form action="../php/guardarQueja.php" method="POST">
+
+      <div class="form-row">
+        <div class="field">
+          <label for="nombre">Nombres <span class="req">*</span></label>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+        </div>
+        <div class="field">
+          <label for="carrera">Carrera <span class="req">*</span></label>
+          <div class="select-wrap">
+            <select id="carrera" name="carrera" required>
+              <option value="" disabled selected>Selecciona…</option>
+              <option value="ing-industrial">Ing. Industrial</option>
+              <option value="ing-electronica">Ing. Electrónica</option>
+              <option value="ing-informatica">Ing. Informática</option>
+              <option value="ing-innovacion">Ing. en Innovación A. S.</option>
+              <option value="ing-petrolera">Ing. Petrolera</option>
+              <option value="ing-energias">Ing. en Energías Ren.</option>
+              <option value="ing-gestion">Ing. en Gestión Emp.</option>
+              <option value="ing-sistemas">Ing. en Sistemas Comp.</option>
+              <option value="ing-tics">Ing. en TICS</option>
+              <option value="contador">Contador Público</option>
+              <option value="buzon">Buzón</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje">
+        </div>
+        <div class="field">
+          <label for="telefono">Teléfono / Celular</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="288 000 0000">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Correo electrónico <span class="req">*</span></label>
+        <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+      </div>
+
+      <div class="field">
+        <label>Tipo de comentario <span class="req">*</span></label>
+        <div class="tipo-group">
+          <input type="radio" id="tipo-queja" name="tipo" value="queja" required>
+          <label for="tipo-queja">⚠ Queja</label>
+          <input type="radio" id="tipo-sugerencia" name="tipo" value="sugerencia">
+          <label for="tipo-sugerencia">💡 Sugerencia</label>
+        </div>
+      </div>
+
+      <hr class="form-divider">
+
+      <div class="field">
+        <label for="mensaje">Mensaje <span class="req">*</span></label>
+        <textarea id="mensaje" name="comentario" placeholder="Describe tu comentario con detalle…" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar mensaje</button>
+
+    </form>
+  </main>
+
+</div>
+
+</body>
+</html>
+</body>
+</html>
+(este es el html)
