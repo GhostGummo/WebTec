@@ -1,0 +1,304 @@
+/* ============================================================
+   finanzas.css  —  Estilos para la página de Finanzas
+   TecNM Campus Cosamaloapan
+   ============================================================ */
+
+/* ===== HERO ===== */
+.carrera-hero {
+    position: relative;
+    height: 380px;
+    background: linear-gradient(135deg, #1B396A 0%, #0f2347 60%, #162d5a 100%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.carrera-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 60%, rgba(37,99,235,0.2) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(0,122,252,0.12) 0%, transparent 40%);
+}
+.carrera-hero::after {
+    content: '';
+    position: absolute;
+    right: -80px; top: -80px;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    border: 60px solid rgba(255,255,255,0.04);
+}
+.carrera-hero .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 2.5rem 0;
+}
+.carrera-hero .badge-clave {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 30px;
+    padding: 0.35rem 1rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    backdrop-filter: blur(4px);
+}
+.carrera-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    margin-bottom: 0;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb-bar {
+    background: #f0f4fb;
+    border-bottom: 1px solid #dde4f0;
+    padding: 0.65rem 0;
+}
+.breadcrumb-bar .breadcrumb {
+    margin: 0;
+    font-size: 0.88rem;
+}
+.breadcrumb-bar .breadcrumb-item a {
+    color: #1B396A;
+    text-decoration: none;
+}
+.breadcrumb-bar .breadcrumb-item.active { color: #555; }
+
+/* ===== LAYOUT ===== */
+.contenido-principal {
+    padding: 3rem 0 4rem;
+}
+
+/* ===== SECCIONES DE CONTENIDO ===== */
+.content-section {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(27,57,106,0.07);
+    border: 1px solid #e8edf7;
+    padding: 2rem 2.25rem;
+    margin-bottom: 1.75rem;
+}
+.content-section h2.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1B396A;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 3px solid #e8edf7;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.content-section h2.section-title i {
+    color: #2563eb;
+    font-size: 1.3rem;
+}
+
+/* ===== CARDS DE DOCUMENTO CON BOTÓN ===== */
+.doc-card {
+    background: #f7f9fd;
+    border: 1px solid #dde4f0;
+    border-radius: 0.75rem;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+    transition: all 0.25s;
+}
+.doc-card:last-child { margin-bottom: 0; }
+.doc-card:hover {
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(27,57,106,0.1);
+    transform: translateY(-2px);
+}
+.doc-card .doc-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+}
+.doc-icon.pdf   { background: #fee2e2; color: #dc2626; }
+.doc-icon.zip   { background: #fef9c3; color: #b45309; }
+.doc-icon.xlsx  { background: #dcfce7; color: #16a34a; }
+.doc-icon.link  { background: #e0e7ff; color: #4338ca; }
+.doc-icon.web   { background: #dbeafe; color: #2563eb; }
+
+.doc-card .doc-info {
+    flex: 1;
+    min-width: 0;
+}
+.doc-card .doc-nombre {
+    font-size: 0.93rem;
+    font-weight: 600;
+    color: #1B396A;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+.doc-card .doc-tipo {
+    font-size: 0.78rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.btn-doc {
+    background: linear-gradient(135deg, #1B396A, #2563eb);
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+    padding: 0.55rem 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.83rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    text-decoration: none;
+    transition: all 0.25s;
+    white-space: nowrap;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(37,99,235,0.2);
+}
+.btn-doc:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37,99,235,0.35);
+    color: white;
+}
+.btn-doc i { font-size: 0.95rem; }
+.btn-doc-ver {
+    background: #fff;
+    color: #1B396A;
+    border: 2px solid #1B396A;
+    border-radius: 0.6rem;
+    padding: 0.5rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.83rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    text-decoration: none;
+    transition: all 0.25s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.btn-doc-ver:hover {
+    background: #f0f4fb;
+    color: #1B396A;
+    transform: translateY(-2px);
+}
+.btn-doc-ver i { font-size: 0.95rem; }
+.doc-btns { display: flex; gap: 0.5rem; flex-shrink: 0; }
+@media (max-width: 768px) {
+    .doc-btns { width: 100%; flex-direction: column; }
+    .btn-doc-ver { justify-content: center; }
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(27,57,106,0.09);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e8edf7;
+}
+.sidebar-card .sidebar-header {
+    background: linear-gradient(135deg, #1B396A, #2563eb);
+    color: #fff;
+    padding: 1rem 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.sidebar-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+.sidebar-card ul li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    color: #1B396A;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.25s;
+    border-left: 3px solid transparent;
+}
+.sidebar-card ul li a:hover,
+.sidebar-card ul li a.active {
+    background: #f0f4fb;
+    border-left-color: #2563eb;
+    padding-left: 1.6rem;
+    font-weight: 500;
+}
+.sidebar-dato {
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+.sidebar-dato:last-child { border-bottom: none; }
+.sidebar-dato i { color: #2563eb; font-size: 1.1rem; flex-shrink: 0; }
+.sidebar-dato .dato-label { font-size: 0.78rem; color: #888; }
+.sidebar-dato .dato-valor { font-weight: 600; color: #1B396A; font-size: 0.93rem; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .carrera-hero { height: 240px; }
+    .carrera-hero h1 { font-size: 1.7rem; }
+    .content-section { padding: 1.25rem 1rem; }
+    .doc-card { flex-wrap: wrap; }
+    .btn-doc { justify-content: center; }
+    .doc-btns { margin-top: 0.5rem; }
+}
+
+/* ===== BOTÓN FLOTANTE REGRESAR ===== */
+.btn-flotante-regresar {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    background: linear-gradient(135deg, #1B396A, #2563eb);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.75rem 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(27,57,106,0.35);
+    transition: all 0.25s;
+}
+.btn-flotante-regresar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(27,57,106,0.45);
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .btn-flotante-regresar { bottom: 1rem; right: 1rem; padding: 0.65rem 1.1rem; font-size: 0.82rem; }
+}
