@@ -1,0 +1,364 @@
+/* ============================================================
+   transparencia.css — Transparencia ITSCO
+   TecNM Campus Cosamaloapan
+   ============================================================ */
+
+/* ===== HERO ===== */
+.carrera-hero {
+    position: relative;
+    height: 320px;
+    background: linear-gradient(135deg, #1B396A 0%, #0f2347 60%, #162d5a 100%);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.carrera-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+        radial-gradient(circle at 15% 60%, rgba(37,99,235,0.2) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(0,122,252,0.12) 0%, transparent 40%);
+}
+.carrera-hero::after {
+    content: '';
+    position: absolute;
+    right: -80px; top: -80px;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    border: 60px solid rgba(255,255,255,0.04);
+}
+.carrera-hero .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 2.5rem 0;
+}
+.carrera-hero .badge-clave {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 30px;
+    padding: 0.35rem 1rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    backdrop-filter: blur(4px);
+}
+.carrera-hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    margin-bottom: 0;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb-bar {
+    background: #f0f4fb;
+    border-bottom: 1px solid #dde4f0;
+    padding: 0.65rem 0;
+}
+.breadcrumb-bar .breadcrumb { margin: 0; font-size: 0.88rem; }
+.breadcrumb-bar .breadcrumb-item a { color: #1B396A; text-decoration: none; }
+.breadcrumb-bar .breadcrumb-item.active { color: #555; }
+
+/* ===== LAYOUT ===== */
+.contenido-principal { padding: 3rem 0 4rem; }
+
+/* ===== CARD CONTENIDO ===== */
+.content-section {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(27,57,106,0.07);
+    border: 1px solid #e8edf7;
+    padding: 2rem 2.25rem;
+    margin-bottom: 1.75rem;
+}
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1B396A;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #e8edf7;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.section-title i { color: #2563eb; font-size: 1.3rem; }
+
+/* ===== DOC CARDS ===== */
+.doc-card {
+    background: #f7f9fd;
+    border: 1px solid #dde4f0;
+    border-radius: 0.75rem;
+    padding: 1rem 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    transition: all 0.25s;
+}
+.doc-card:last-child { margin-bottom: 0; }
+.doc-card:hover {
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(27,57,106,0.1);
+    transform: translateY(-2px);
+}
+/* Variante abrogada */
+.doc-card.abrogada {
+    background: #f9f9f9;
+    border-color: #e5e5e5;
+    opacity: 0.7;
+}
+.doc-card.abrogada:hover {
+    transform: none;
+    box-shadow: none;
+    background: #f9f9f9;
+}
+
+.doc-icon {
+    width: 44px; height: 44px;
+    border-radius: 0.6rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+.doc-icon.pdf   { background: #fee2e2; color: #dc2626; }
+.doc-icon.link  { background: #dbeafe; color: #2563eb; }
+.doc-icon.muted { background: #f0f0f0; color: #aaa; }
+
+.doc-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.doc-nombre {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #1B396A;
+    line-height: 1.4;
+}
+.doc-tipo {
+    font-size: 0.78rem;
+    color: #888;
+    letter-spacing: 0.3px;
+}
+
+/* Badge ABROGADA */
+.badge-abrogada {
+    display: inline-block;
+    background: #fee2e2;
+    color: #dc2626;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+/* ===== BOTONES ===== */
+.doc-btns {
+    display: flex;
+    gap: 0.4rem;
+    flex-shrink: 0;
+    align-items: center;
+}
+.btn-doc {
+    background: linear-gradient(135deg, #1B396A, #2563eb);
+    color: #fff !important;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.42rem 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.73rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    text-decoration: none !important;
+    transition: all 0.2s;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.22);
+}
+.btn-doc:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(37,99,235,0.38);
+    color: #fff !important;
+}
+.btn-doc-ver {
+    background: #fff;
+    color: #1B396A !important;
+    border: 2px solid #1B396A;
+    border-radius: 0.5rem;
+    padding: 0.38rem 0.85rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.73rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    text-decoration: none !important;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+.btn-doc-ver:hover {
+    background: #f0f4fb;
+    color: #1B396A !important;
+    transform: translateY(-2px);
+}
+
+/* ===== ACORDEÓN ===== */
+.accordion-transp .accordion-item {
+    border: 1px solid #dde4f0;
+    border-radius: 0.75rem !important;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(27,57,106,0.05);
+}
+.accordion-transp .accordion-item:last-child { margin-bottom: 0; }
+
+.accordion-transp .accordion-button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1B396A;
+    background: #f7f9fd;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.accordion-transp .accordion-button:not(.collapsed) {
+    color: #fff;
+    background: linear-gradient(135deg, #1B396A, #2563eb);
+    box-shadow: none;
+}
+.accordion-transp .accordion-button:not(.collapsed) .badge-year {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+.accordion-transp .accordion-button::after {
+    filter: none;
+    margin-left: 0;
+}
+.accordion-transp .accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+.accordion-transp .accordion-button:focus {
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+.badge-year {
+    background: #e8edf7;
+    color: #1B396A;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    margin-right: 2rem;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.accordion-transp .accordion-body {
+    padding: 1.25rem;
+    background: #fff;
+}
+/* Doc cards dentro del acordeón sin margen extra al final */
+.accordion-transp .accordion-body .doc-card:last-child { margin-bottom: 0; }
+
+/* ===== SIDEBAR ===== */
+.sidebar-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(27,57,106,0.09);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e8edf7;
+}
+.sidebar-card .sidebar-header {
+    background: linear-gradient(135deg, #1B396A, #2563eb);
+    color: #fff;
+    padding: 1rem 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.sidebar-card ul { list-style: none; margin: 0; padding: 0.5rem 0; }
+.sidebar-card ul li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    color: #1B396A;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.25s;
+    border-left: 3px solid transparent;
+}
+.sidebar-card ul li a:hover {
+    background: #f0f4fb;
+    border-left-color: #2563eb;
+    padding-left: 1.6rem;
+    font-weight: 600;
+}
+.sidebar-dato {
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    border-bottom: 1px solid #f0f0f0;
+}
+.sidebar-dato:last-child { border-bottom: none; }
+.sidebar-dato > i { color: #2563eb; font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.sidebar-dato .dato-label { font-size: 0.78rem; color: #888; }
+.sidebar-dato .dato-valor { font-weight: 600; color: #1B396A; font-size: 0.9rem; line-height: 1.3; }
+
+/* Licitación en sidebar */
+.licitacion-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+}
+.licitacion-icon {
+    width: 40px; height: 40px;
+    border-radius: 0.5rem;
+    background: #fee2e2;
+    color: #dc2626;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+.licitacion-info { flex: 1; min-width: 0; }
+.licitacion-nombre {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #1B396A;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 0.15rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .carrera-hero { height: 240px; }
+    .carrera-hero h1 { font-size: 1.7rem; }
+    .content-section { padding: 1.25rem 1rem; }
+    .doc-card { flex-wrap: wrap; gap: 0.75rem; }
+    .doc-btns { width: 100%; }
+    .btn-doc, .btn-doc-ver { flex: 1; justify-content: center; }
+    .badge-year { margin-right: 2.5rem; }
+}
